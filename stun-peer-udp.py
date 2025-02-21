@@ -31,6 +31,7 @@ print('ваш IP:port')
 print(STUN(outport),sep=':')
 print('введите IP:port собеседника')
 ip, port = input().split(':')
+port = int(port)
 
 # отправляет пакет каждую секунду, пока не получит ответ
 # потом udp-duplex
