@@ -45,7 +45,7 @@ def sender(sock):
 def receiver(sock):
 	global connected
 	while True:
-		data, client_address = server.recvfrom(1024)
+		data, client_address = sock.recvfrom(1024)
 		if not connected:
 			print('connected!!!')
 		connected = True
