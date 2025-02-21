@@ -1,6 +1,7 @@
 import socket
 import time
 import sys
+import threading
 
 def STUN(port, host="stun.ekiga.net"):
     #logging.debug(f"STUN request via {host}")
