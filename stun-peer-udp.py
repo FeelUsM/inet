@@ -41,7 +41,7 @@ def sender(sock):
 		sock.sendto(b"hello\n",(ip, port))
 		time.sleep(1)
 	while True:
-		client.sendto((input()+'\n').encode('utf-8'),(ip,port))
+		sock.sendto((input()+'\n').encode('utf-8'),(ip,port))
 
 def receiver(sock):
 	global connected
