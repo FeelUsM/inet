@@ -1,5 +1,6 @@
 import socket
 import time
+import sys
 
 def STUN(port, host="stun.ekiga.net"):
     #logging.debug(f"STUN request via {host}")
@@ -40,7 +41,7 @@ def sender(sock):
 	while True:
 		client.sendto((input()+'\n').encode('utf-8'),(ip,port))
 
-def receiver(sock)
+def receiver(sock):
 	global connected
 	while True:
 		data, client_address = server.recvfrom(1024)
